@@ -12,4 +12,4 @@ module FaradayMiddleware
   end
 end
 
-Faraday.register_middleware :response, :parse_oj => FaradayMiddleware::ParseOj
+Faraday.register_middleware :response, :oj => FaradayMiddleware::ParseOj

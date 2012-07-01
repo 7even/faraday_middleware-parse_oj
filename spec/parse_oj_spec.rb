@@ -6,7 +6,7 @@ describe FaradayMiddleware::ParseOj do
     @parsed_body = stub("Parsed body")
     
     @connection = Faraday.new do |builder|
-      builder.response :parse_oj
+      builder.response :oj
       builder.adapter :test do |stub|
         stub.get('/url') do
           [200, {}, @body]

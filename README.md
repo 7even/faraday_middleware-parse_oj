@@ -20,10 +20,13 @@ $ gem install faraday_middleware-parse_oj
 The same as `FaradayMiddleware::ParseJson`:
 
 ``` ruby
+require 'faraday_middleware/parse_oj'
+
 connection = Faraday.new do |builder|
-  builder.response :parse_oj
+  builder.response :oj
   builder.adapter  Faraday.default_adapter
 end
+
 connection.get('http://example.com/some.json')
 ```
 
