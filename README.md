@@ -1,24 +1,31 @@
 # FaradayMiddleware::ParseOj
 
-TODO: Write a gem description
+A simple Faraday middleware that parses JSON responses. It is identical to `FaradayMiddleware::ParseJson` from `faraday_middleware` gem except that it uses `Oj.load` instead of `JSON.parse`.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+``` ruby
+# Gemfile
+gem 'faraday_middleware-parse_oj'
+```
 
-    gem 'faraday_middleware-parse_oj'
+or
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install faraday_middleware-parse_oj
+``` bash
+$ gem install faraday_middleware-parse_oj
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+The same as `FaradayMiddleware::ParseJson`:
+
+``` ruby
+connection = Faraday.new do |builder|
+  builder.response :parse_oj
+  builder.adapter  Faraday.default_adapter
+end
+connection.get('http://example.com/some.json')
+```
 
 ## Contributing
 

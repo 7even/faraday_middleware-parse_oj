@@ -4,9 +4,9 @@ require File.expand_path('../lib/faraday_middleware/parse_oj', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ['Vsevolod Romashov']
   gem.email         = ['7@7vn.ru']
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ''
+  gem.summary       = %q{Oj middleware for Faraday}
+  gem.description   = %q{Faraday middleware for parsing JSON using the Oj parser.}
+  gem.homepage      = 'https://github.com/7even/faraday_middleware-parse_oj'
   
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
