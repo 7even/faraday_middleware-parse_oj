@@ -5,11 +5,11 @@ module FaradayMiddleware
     dependency 'oj'
     
     define_parser do |body|
-      Oj.load(body) unless body.strip.empty?
+      Oj.load(body, mode: :compat) unless body.strip.empty?
     end
     
-    VERSION = '0.1'
+    VERSION = '0.2'
   end
 end
 
-Faraday.register_middleware :response, :oj => FaradayMiddleware::ParseOj
+Faraday.register_middleware :response, oj: FaradayMiddleware::ParseOj

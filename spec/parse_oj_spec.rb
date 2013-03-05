@@ -16,7 +16,7 @@ describe FaradayMiddleware::ParseOj do
   end
   
   it "parses the response body with Oj.load" do
-    Oj.should_receive(:load).with(@body).and_return(@parsed_body)
+    Oj.should_receive(:load).with(@body, mode: :compat).and_return(@parsed_body)
     @connection.get('/url').body.should == @parsed_body
   end
 end
