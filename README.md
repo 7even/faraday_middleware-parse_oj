@@ -6,7 +6,7 @@ A simple Faraday middleware that parses JSON responses. It is identical to `Fara
 
 ``` ruby
 # Gemfile
-gem 'faraday_middleware-parse_oj', '~> 0.2'
+gem 'faraday_middleware-parse_oj', '~> 0.2.1'
 ```
 
 or
