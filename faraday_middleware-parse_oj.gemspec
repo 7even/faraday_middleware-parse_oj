@@ -16,7 +16,7 @@ Gem::Specification.new do |gem|
   gem.version       = FaradayMiddleware::ParseOj::VERSION
   
   gem.add_runtime_dependency 'faraday_middleware', '~> 0.8'
-  gem.add_runtime_dependency 'oj',                 '~> 1.2'
+  gem.add_runtime_dependency 'oj',                 '~> 2.0'
   
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'rspec'
