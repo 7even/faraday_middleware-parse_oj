@@ -3,13 +3,13 @@ require 'faraday_middleware/response_middleware'
 module FaradayMiddleware
   class ParseOj < ResponseMiddleware
     dependency 'oj'
-    
+
     define_parser do |body|
       Oj.load(body, mode: :compat) unless body.strip.empty?
     end
-    
-    VERSION = '0.2.1'
+
+    VERSION = '0.3.0'
   end
 end
 
-Faraday.register_middleware :response, oj: FaradayMiddleware::ParseOj
+Faraday::Response.register_middleware(:oj => lambda { FaradayMiddleware::ParseOj })
