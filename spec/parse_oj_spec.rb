@@ -3,7 +3,7 @@ require 'faraday_middleware/parse_oj'
 describe FaradayMiddleware::ParseOj do
   before(:each) do
     @body = '{"a": 1, "b": 2}'
-    @parsed_body = stub("Parsed body")
+    @parsed_body = double("Parsed body")
     
     @connection = Faraday.new do |builder|
       builder.response :oj
@@ -16,7 +16,7 @@ describe FaradayMiddleware::ParseOj do
   end
   
   it "parses the response body with Oj.load" do
-    Oj.should_receive(:load).with(@body, mode: :compat).and_return(@parsed_body)
-    @connection.get('/url').body.should == @parsed_body
+    expect(Oj).to receive(:load).with(@body, mode: :compat).and_return(@parsed_body)
+    expect(@connection.get('/url').body).to eq(@parsed_body)
   end
 end
