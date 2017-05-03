@@ -17,7 +17,7 @@ Gem::Specification.new do |gem|
 
   gem.add_runtime_dependency 'faraday',            '~> 0.9'
   gem.add_runtime_dependency 'faraday_middleware', '>= 0.9.1', '< 1.0'
-  gem.add_runtime_dependency 'oj',                 '~> 2.0'
+  gem.add_runtime_dependency 'oj',                 '>= 2.0', '< 4.0'
 
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'rspec'
