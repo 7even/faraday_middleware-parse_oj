@@ -1,4 +1,4 @@
-# FaradayMiddleware::ParseOj
+# FaradayMiddleware::ParseOj [![Build Status](https://travis-ci.org/7even/faraday_middleware-parse_oj.svg?branch=master)](https://travis-ci.org/7even/faraday_middleware-parse_oj)
 
 A simple Faraday middleware that parses JSON responses. It is identical to `FaradayMiddleware::ParseJson` from `faraday_middleware` gem except that it uses `Oj.load` instead of `JSON.parse`.
 
