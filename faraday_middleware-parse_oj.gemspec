@@ -1,4 +1,3 @@
-# -*- encoding: utf-8 -*-
 require File.expand_path('../lib/faraday_middleware/parse_oj', __FILE__)
 
 Gem::Specification.new do |gem|
