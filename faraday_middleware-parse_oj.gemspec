@@ -1,5 +1,3 @@
-require File.expand_path('../lib/faraday_middleware/parse_oj', __FILE__)
-
 Gem::Specification.new do |gem|
   gem.authors       = ['Vsevolod Romashov']
   gem.email         = ['7@7vn.ru']
@@ -12,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = 'faraday_middleware-parse_oj'
   gem.require_paths = ['lib']
-  gem.version       = FaradayMiddleware::ParseOj::VERSION
+  gem.version       = '0.3.2'
 
   gem.add_runtime_dependency 'faraday',            '~> 0.9'
   gem.add_runtime_dependency 'faraday_middleware', '>= 0.9.1', '< 1.0'

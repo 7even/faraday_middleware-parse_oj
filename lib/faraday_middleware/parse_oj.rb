@@ -7,8 +7,6 @@ module FaradayMiddleware
     define_parser do |body|
       Oj.load(body, mode: :compat) unless body.strip.empty?
     end
-
-    VERSION = '0.3.2'
   end
 end
 
